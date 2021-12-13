@@ -6,10 +6,11 @@ import React,{useState} from 'react'
 const Task = ({ task, deleteTask, toggleDone,updateTask }) => {
 
   const [show,setShow]=useState(false);
-const [todoId,setTodoId]=useState(task.id);
+const [todoId,setTodoId]=useState("");
 const [todoText,setTodoText]=useState(task.text);
 const [todoDay,setTodoDay]=useState(task.day)
-const [todoDetail,setTodoDetail]=useState(task.detail)
+const [todoDetail,setTodoDetail]=useState(task.detail);
+setTodoId(task.id);
 
  
   const onSubmit = (e) => {
